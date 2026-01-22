@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VAJRADRISHTI - AI-Powered Deepfake Detection Platform for National Security">
+    <meta name="keywords" content="deepfake detection, AI security, cybersecurity, forensics">
+    <meta name="author" content="National Cybersecurity Bureau">
+    <title>VAJRADRISHTI - The Indestructible Eye of Truth</title>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <nav id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="logo" data-page="home">VAJRADRISHTI</a>
+            <ul class="nav-links">
+                <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
+                <li><a href="#" data-page="upload" class="nav-link">Upload</a></li>
+                <li><a href="#" data-page="dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="#" data-page="about" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== HOME PAGE ==================== -->
+    <div class="page active" id="home">
+        <div class="hero">
+            <h1>VAJRADRISHTI</h1>
+            <p class="tagline">The Indestructible Eye of Truth</p>
+            <p class="hero-description">
+                AI-Powered Deepfake Detection & Mitigation Platform for National Security, 
+                Law Enforcement, and Media Integrity. Protecting truth in the digital age.
+            </p>
+            <a href="#" class="cta-button" data-page="upload">Upload Media for Verification</a>
+        </div>
+
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🔍 Multimodal Analysis</h3>
+                    <p>Advanced AI examines video, audio, facial patterns, and metadata simultaneously to detect sophisticated deepfakes with unprecedented accuracy using state-of-the-art neural networks.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Real-Time Detection</h3>
+                    <p>Process media files in seconds with our optimized detection pipeline. Get instant verdicts for time-sensitive investigations and critical incident response scenarios.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛡️ Forensic Grade Reports</h3>
+                    <p>Generate court-admissible forensic reports with detailed analysis, confidence scores, manipulation heatmaps, and complete chain-of-custody documentation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔐 Secure Infrastructure</h3>
+                    <p>Government-grade encryption, air-gapped deployment options, and full compliance with national data protection laws. Your evidence remains completely confidential.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Investigation Dashboard</h3>
+                    <p>Comprehensive law enforcement portal for case management, evidence tracking, collaborative investigation workflows, and real-time threat intelligence integration.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌐 Provenance Tracking</h3>
+                    <p>Trace media origin, detect manipulation timestamps, and establish authenticity through blockchain-verified metadata and digital provenance chain analysis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== UPLOAD PAGE ==================== -->
+    <div class="page" id="upload">
+        <div class="upload-container">
+            <div class="upload-header">
+                <h2>Upload Media for Analysis</h2>
+                <p>Drag and drop or click to upload video, image, or audio files for AI-powered deepfake detection</p>
+            </div>
+            
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-icon">📁</div>
+                <h3>Drag & Drop or Click to Upload</h3>
+                <p>Supported formats: MP4, AVI, MOV, MKV, JPG, PNG, WAV, MP3, AAC</p>
+                <p style="margin-top: 1rem; font-size: 0.95rem;">Maximum file size: 500MB</p>
+                <input type="file" id="fileInput" class="file-input" accept="video/*,image/*,audio/*">
+            </div>
+
+            <div class="file-preview" id="filePreview">
+                <h3 style="color: var(--accent-teal); margin-bottom: 1rem;">File Preview</h3>
+                <video class="preview-video" id="previewVideo" controls></video>
+                <img class="preview-image" id="previewImage" style="display: none;" alt="Preview">
+            </div>
+
+            <div class="analysis-progress" id="analysisProgress">
+                <h3 style="text-align: center; color: var(--accent-teal); margin-bottom: 2rem; font-size: 2rem;">
+                    AI Analysis in Progress
+                </h3>
+                
+                <div class="progress-step" id="step1">
+                    <div class="step-icon">1</div>
+                    <div class="progress-bar-container">
+                        <strong>Frame Extraction & Preprocessing</strong>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" id="progress1"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-step" id="step2">
+                    <div class="step-icon">2</div>
+                    <div class="progress-bar-container">
+                        <strong>Facial & Biometric Analysis</strong>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" id="progress2"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-step" id="step3">
+                    <div class="step-icon">3</div>
+                    <div class="progress-bar-container">
+                        <strong>Audio Waveform & Voice Verification</strong>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" id="progress3"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-step" id="step4">
+                    <div class="step-icon">4</div>
+                    <div class="progress-bar-container">
+                        <strong>Metadata & Provenance Check</strong>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" id="progress4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== RESULTS PAGE ==================== -->
+    <div class="page" id="results">
+        <div class="results-container">
+            <div class="verdict-card fake" id="verdictCard">
+                <div class="verdict-label" id="verdictLabel">DEEPFAKE DETECTED</div>
+                <p>AI Analysis Complete - Forensic Report Generated</p>
+                
+                <div class="confidence-ring">
+                    <svg class="ring-svg" width="220" height="220">
+                        <circle class="ring-bg" cx="110" cy="110" r="95"></circle>
+                        <circle class="ring-progress" cx="110" cy="110" r="95" 
+                                stroke-dasharray="596.9" stroke-dashoffset="119.4" id="ringProgress"></circle>
+                    </svg>
+                    <div class="ring-center">
+                        <div class="confidence-score" id="confidenceScore">92%</div>
+                        <p>Confidence</p>
+                    </div>
+                </div>
+
+                <button class="download-report" onclick="downloadReport()">
+                    ⬇ Download Forensic Report (PDF)
+                </button>
+            </div>
+
+            <div class="analysis-details">
+                <div class="detail-card">
+                    <h4>Facial Inconsistencies</h4>
+                    <div class="detail-value" style="color: var(--danger);">27 Detected</div>
+                    <p>Unnatural eye movements, lip-sync errors, micro-expression anomalies detected across analyzed frames.</p>
+                </div>
+                <div class="detail-card">
+                    <h4>Audio Analysis</h4>
+                    <div class="detail-value" style="color: var(--warning);">Suspicious</div>
+                    <p>Voice cloning artifacts detected. Spectral analysis shows synthetic generation patterns.</p>
+                </div>
+                <div class="detail-card">
+                    <h4>Metadata Status</h4>
+                    <div class="detail-value" style="color: var(--danger);">Modified</div>
+                    <p>Timestamps altered, EXIF data inconsistent, original source unclear. Chain of custody broken.</p>
+                </div>
+                <div class="detail-card">
+                    <h4>Processing Time</h4>
+                    <div class="detail-value" style="color: var(--accent-teal);">8.4s</div>
+                    <p>1,247 frames analyzed using GPU-accelerated neural network inference pipeline.</p>
+                </div>
+                <div class="detail-card">
+                    <h4>Frame Analysis</h4>
+                    <div class="detail-value" style="color: var(--info);">1,247</div>
+                    <p>Total frames extracted and processed through multi-stage deepfake detection pipeline.</p>
+                </div>
+                <div class="detail-card">
+                    <h4>Manipulation Type</h4>
+                    <div class="detail-value" style="color: var(--danger);">Face Swap</div>
+                    <p>GAN-based face replacement detected. Likely generated using StyleGAN2 or similar architecture.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== DASHBOARD PAGE ==================== -->
+    <div class="page" id="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Law Enforcement Dashboard</h2>
+                <div class="officer-info">
+                    Officer ID: <strong>LE-2847</strong> | Station: <strong>Cyber Crime Unit - Central</strong>
+                </div>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-value">143</div>
+                    <div class="stat-label">Total Cases</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--danger);">87</div>
+                    <div class="stat-label">Deepfakes Detected</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--success);">42</div>
+                    <div class="stat-label">Verified Authentic</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color: var(--warning);">14</div>
+                    <div class="stat-label">Under Review</div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--accent-teal); margin-bottom: 1.5rem; font-size: 2rem;">Recent Investigations</h3>
+            
+            <div class="case-list">
+                <div class="case-header">
+                    <div>Case ID</div>
+                    <div>Description</div>
+                    <div>Type</div>
+                    <div>Timestamp</div>
+                    <div>Status</div>
+                </div>
+                
+                <div class="case-item">
+                    <div class="case-id">CC-2024-1847</div>
+                    <div class="case-desc">Political misinformation video</div>
+                    <div class="case-type">Video Deepfake</div>
+                    <div class="case-timestamp">2024-01-20 14:32</div>
+                    <div><span class="status-badge fake">FAKE</span></div>
+                </div>
+                
+                <div class="case-item">
+                    <div class="case-id">CC-2024-1846</div>
+                    <div class="case-desc">Celebrity endorsement scam</div>
+                    <div class="case-type">Audio Clone</div>
+                    <div class="case-timestamp">2024-01-20 11:18</div>
+                    <div><span class="status-badge fake">FAKE</span></div>
+                </div>
+                
+                <div class="case-item">
+                    <div class="case-id">CC-2024-1845</div>
+                    <div class="case-desc">Corporate CEO statement verification</div>
+                    <div class="case-type">Video Analysis</div>
+                    <div class="case-timestamp">2024-01-19 16:45</div>
+                    <div><span class="status-badge real">REAL</span></div>
+                </div>
+                
+                <div class="case-item">
+                    <div class="case-id">CC-2024-1844</div>
+                    <div class="case-desc">Social media viral content</div>
+                    <div class="case-type">Image Forensics</div>
+                    <div class="case-timestamp">2024-01-19 09:22</div>
+                    <div><span class="status-badge review">REVIEW</span></div>
+                </div>
+                
+                <div class="case-item">
+                    <div class="case-id">CC-2024-1843</div>
+                    <div class="case-desc">Financial fraud voice call</div>
+                    <div class="case-type">Audio Clone</div>
+                    <div class="case-timestamp">2024-01-18 13:55</div>
+                    <div><span class="status-badge fake">FAKE</span></div>
+                </div>
+                
+                <div class="case-item">
+                    <div class="case-id">CC-2024-1842</div>
+                    <div class="case-desc">News broadcast verification</div>
+                    <div class="case-type">Video Analysis</div>
+                    <div class="case-timestamp">2024-01-18 10:10</div>
+                    <div><span class="status-badge real">REAL</span></div>
+                </div>
+                
+                <div class="case-item">
+                    <div class="case-id">CC-2024-1841</div>
+                    <div class="case-desc">Blackmail video investigation</div>
+                    <div class="case-type">Video Deepfake</div>
+                    <div class="case-timestamp">2024-01-17 15:30</div>
+                    <div><span class="status-badge fake">FAKE</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== ABOUT PAGE ==================== -->
+    <div class="page" id="about">
+        <div class="container">
+            <div class="about-section">
+                <h2>About VAJRADRISHTI</h2>
+                <p class="about-intro">
+                    VAJRADRISHTI represents a breakthrough in AI-powered media authentication and deepfake detection. 
+                    Developed for national security agencies, law enforcement, and media integrity operations, 
+                    our platform employs cutting-edge multimodal deep learning to detect even the most sophisticated 
+                    synthetic media manipulations.
+                </p>
+            </div>
+
+            <div class="about-section">
+                <h2>Technology Pipeline</h2>
+                <div class="tech-pipeline">
+                    <div class="pipeline-step">
+                        <div class="step-number">1</div>
+                        <h3>Media Ingestion</h3>
+                        <p>Secure upload and preprocessing of video, audio, and image files with format normalization and quality enhancement.</p>
+                    </div>
+                    
+                    <div class="pipeline-step">
+                        <div class="step-number">2</div>
+                        <h3>Multimodal Analysis</h3>
+                        <p>Parallel processing through specialized neural networks for facial detection, audio analysis, and temporal consistency checks.</p>
+                    </div>
+                    
+                    <div class="pipeline-step">
+                        <div class="step-number">3</div>
+                        <h3>Feature Extraction</h3>
+                        <p>Deep learning models extract thousands of micro-features including facial landmarks, voice biometrics, and compression artifacts.</p>
+                    </div>
+                    
+                    <div class="pipeline-step">
+                        <div class="step-number">4</div>
+                        <h3>Anomaly Detection</h3>
+                        <p>AI algorithms identify inconsistencies in lighting, shadows, reflections, audio-visual sync, and natural human micro-expressions.</p>
+                    </div>
+                    
+                    <div class="pipeline-step">
+                        <div class="step-number">5</div>
+                        <h3>Verdict Generation</h3>
+                        <p>Ensemble model aggregates all detection signals to produce final verdict with confidence scores and forensic evidence mapping.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section features-section">
+                <h3>Core Capabilities</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-content">
+                            <h4>Face Swap Detection</h4>
+                            <p>Identify GAN-based face replacements, deepfake videos, and identity theft attempts using advanced facial recognition and consistency analysis.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🎤</div>
+                        <div class="feature-content">
+                            <h4>Voice Cloning Detection</h4>
+                            <p>Detect synthetic voice generation, audio deepfakes, and voice cloning through spectral analysis and biometric verification.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🔬</div>
+                        <div class="feature-content">
+                            <h4>Metadata Forensics</h4>
+                            <p>Extract and analyze EXIF data, timestamps, device information, and edit history to establish media provenance and authenticity.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">⚖️</div>
+                        <div class="feature-content">
+                            <h4>Chain of Custody</h4>
+                            <p>Maintain cryptographic evidence trails for legal proceedings with blockchain-verified timestamps and tamper-proof audit logs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">📈</div>
+                        <div class="feature-content">
+                            <h4>Threat Intelligence</h4>
+                            <p>Integration with global deepfake databases and threat intelligence feeds for pattern recognition and emerging threat detection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-content">
+                            <h4>Secure Deployment</h4>
+                            <p>On-premise, air-gapped, and cloud deployment options with military-grade encryption and compliance certifications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h3 style="text-align: center; color: var(--accent-teal); font-size: 2rem; margin-bottom: 2rem;">
+                    Trusted by National Security Agencies
+                </h3>
+                <p class="about-intro">
+                    VAJRADRISHTI is deployed across law enforcement agencies, intelligence bureaus, and media verification 
+                    organizations globally. Our platform has successfully identified thousands of deepfake attacks, 
+                    prevented misinformation campaigns, and supported criminal investigations with court-admissible forensic evidence.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
